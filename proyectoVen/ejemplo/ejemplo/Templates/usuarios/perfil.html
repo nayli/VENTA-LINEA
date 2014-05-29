@@ -1,0 +1,89 @@
+{% extends 'index.html' %}
+
+{% block titulo %}
+Perfil de Usuario
+{% endblock %}
+
+{% block cuerpo %}
+    <div id="content" class="float_r">
+            <div id="slider-wrapper">
+                <div id="slider" class="nivoSlider">
+                    <img src="{{STATIC_URL}}images/slider/02.jpg" alt="" />
+                    <a href="#"><img src="{{STATIC_URL}}images/slider/01.jpg" alt="" title="" /></a>
+                    <img src="{{STATIC_URL}}images/slider/03.jpg" alt="" />
+                    <img src="{{STATIC_URL}}images/slider/04.jpg" alt="" title="" />
+                </div>
+                <div id="htmlcaption" class="nivo-html-caption">
+                    <strong></strong><em></em> <a href="#"></a>.
+                </div>
+            </div>
+            <script type="text/javascript" src="{{STATIC_URL}}js/jquery-1.4.3.min.js"></script>
+            <script type="text/javascript" src="{{STATIC_URL}}js/jquery.nivo.slider.pack.js"></script>
+            <script type="text/javascript">
+            $(window).load(function() {
+                $('#slider').nivoSlider();
+            });
+            </script>
+            <h1>NUEVOS PRODUCTOS</h1>
+            <div class="product_box">
+                <h3></h3>
+                <a href="productdetail.html"><img src="{{STATIC_URL}}images/product/01.jpg" alt="Shoes 1" /></a>
+                <p></p>
+                <p class="product_price">BS100</p>
+                <a href="shoppingcart.html" class="addtocart"></a>
+                <a href="productdetail.html" class="detail"></a>
+            </div>          
+            <div class="product_box">
+                <h3></h3>
+                <a href="productdetail.html"><img src="{{STATIC_URL}}images/product/02.jpg" alt="Shoes 2" /></a>
+                <p> <a href="http://validator.w3.org/check?uri=referer" rel="nofollow"></a> <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="nofollow"></a>.</p>
+              <p class="product_price">Bs 80</p>
+                <a href="shoppingcart.html" class="addtocart"></a>
+                <a href="productdetail.html" class="detail"></a>
+            </div>          
+            <div class="product_box no_margin_right">
+                <h3></h3>
+                <a href="productdetail.html"><img src="{{STATIC_URL}}images/product/03.jpg" alt="Shoes 3" /></a>
+                <p></p>
+              <p class="product_price">Bs 160</p>
+                <a href="shoppingcart.html" class="addtocart"></a>
+                <a href="productdetail.html" class="detail"></a>
+            </div> 
+                      
+            <div class="cleaner"></div>
+                    
+        <div class="product_box">
+                <h3></h3>
+            <a href="productdetail.html"><img src="{{STATIC_URL}}images/product/04.jpg" alt="Shoes 4" /></a>
+            <p></p>
+      <p class="product_price">Bs 220</p>
+                <a href="shoppingcart.html" class="addtocart"></a>
+                <a href="productdetail.html" class="detail"></a>
+            </div>          
+            <div class="product_box">
+                <h3></h3>
+                <a href="productdetail.html"><img src="{{STATIC_URL}}images/product/05.jpg" alt="Shoes 5" /></a>
+                <p></p>
+              <p class="product_price">Bs 180</p>
+                <a href="shoppingcart.html" class="addtocart"></a>
+                <a href="/detalles" class="detail"></a>
+            </div>          
+            <div class="product_box no_margin_right">
+                <h3></h3>
+                <a href="productdetail.html"><img src="{{STATIC_URL}}images/product/06.jpg" alt="Shoes 6" /></a>
+                <p></p>
+                <p class="product_price">Bs 160</p>
+                <a href="shoppingcart.html" class="addtocart"></a>
+                <a href="/detalles" class="detail"></a>
+            </div>          
+        </div> 
+        <div class="cleaner"></div>
+      
+    </div> <!-- END of templatemo_main -->
+
+</div> <!-- END of templatemo_wrapper -->
+</div> <!-- END of templatemo_body_wrapper -->
+
+</body>
+</html>
+{% endblock %}

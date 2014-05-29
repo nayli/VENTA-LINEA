@@ -1,0 +1,59 @@
+{% extends 'index.html' %}
+{% block titulo %}
+    productos
+{% endblock titulo %}
+ {%block cuerpo%}
+  <h1> PRODUCTOS</h1>
+            <div class="product_box">
+                <h3></h3>
+                <a href="productdetail.html"><img src="{{STATIC_URL}}images/product/01.jpg" alt="Shoes 1" /></a>
+                <p></p>
+                <p class="product_price">bs 100</p>
+                <a href="shoppingcart.html" class="addtocart"></a>
+                <a href="productdetail.html" class="detail"></a>
+            </div>          
+            <div class="product_box">
+                <h3></h3>
+                <a href="productdetail.html"><img src="{{STATIC_URL}}images/product/02.jpg" alt="Shoes 2" /></a>
+                <p><a href="http://validator.w3.org/check?uri=referer" rel="nofollow"></a> &amp; <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="nofollow"></a>.</p>
+              <p class="product_price">bs 180</p>
+                <a href="shoppingcart.html" class="addtocart"></a>
+                <a href="productdetail.html" class="detail"></a>
+            </div> 
+                  
+            <div class="product_box no_margin_right">
+                <h3></h3>
+                <a href="productdetail.html"><img src="{{STATIC_URL}}images/product/03.jpg" alt="Shoes 3" /></a>
+                <p></p>
+              <p class="product_price">bs 60</p>
+                <a href="shoppingcart.html" class="addtocart"></a>
+                <a href="productdetail.html" class="detail"></a>
+            </div>                
+            <div class="product_box">
+                <h3></h3>
+                 <a href="productdetail.html"><img src="{{STATIC_URL}}images/product/04.jpg" alt="Shoes 4" />  </a>
+                <p></p>
+                <p class="product_price">bs 220</p>
+                <a href="shoppingcart.html" class="addtocart"></a>
+                <a href="productdetail.html" class="detail"></a>
+            </div>  
+                  
+            <div class="product_box">
+                <h3></h3>
+                <a href="productdetail.html"><img src="{{STATIC_URL}}images/product/05.jpg" alt="Shoes 5" /></a>
+                <p></p>
+                <p class="product_price">bs 180</p>
+                <a href="shoppingcart.html" class="addtocart"></a>
+                <a href="/detalles" class="detail"></a>
+            </div>          
+            <div class="product_box no_margin_right">
+                <h3></h3>
+                <a href="productdetail.html"><img src="{{STATIC_URL}}images/product/06.jpg" alt="Shoes 6" /></a>
+                <p></p>
+                <p class="product_price">bs160</p>
+                <a href="shoppingcart.html" class="addtocart"></a>
+                <a href="/detalles" class="detail"></a>
+            </div>
+       
+    
+{%endblock%} 

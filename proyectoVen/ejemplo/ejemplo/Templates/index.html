@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+    {% block titulo %}
+         TIENDA EN LINEA
+    {%endblock%}
+</title>
+<meta name="keywords" content="online, free template, ecommerce, online shop, website templates, CSS, HTML" />
+<meta name="description" content="Shoes Store is a free ecommerce template provided by templatemo.com" />
+<link href="{{STATIC_URL}}templatemo_style.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" href="{{STATIC_URL}}nivo-slider.css" type="text/css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/ddsmoothmenu.css" />
+
+<script type="text/javascript" src="{{STATIC_URL}}js/jquery.min.js"></script>
+<script type="text/javascript" src="{{STATIC_URL}}js/ddsmoothmenu.js">
+
+
+
+</script>
+
+<script type="text/javascript">
+
+ddsmoothmenu.init({
+    mainmenuid: "top_nav", //menu DIV id
+    orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+    classname: 'ddsmoothmenu', //class added to menu's outer DIV
+    //customtheme: ["#1c5a80", "#18374a"],
+    contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+
+</script>
+
+</head>
+
+<body>
+
+<div id="templatemo_body_wrapper">
+<div id="templatemo_wrapper">
+
+    <div id="templatemo_header">
+        <div id="site_title"><h1><a>TIENDA POR LINEA</a></h1></div>
+        <div id="header_right">
+           <p>
+               <li>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'usuarios.views.loged_out' %}" title="Sesion">Cerrar Sesion</a>
+                {% else %}
+                    <a href="{% url 'usuarios.views.loged_in' %}" title="Sesion">Iniciar Sesion</a>
+                {% endif %}
+            </li></p>
+                
+        </div>
+        <div class="cleaner"></div>
+    </div> <!-- END of templatemo_header -->
+    
+    <div id="templatemo_menubar">
+        <div id="top_nav" class="ddsmoothmenu">
+            <ul>
+                <li><a href="/" class="selected">Inicio</a></li>
+                <li>
+                    {% if user.is_authenticated %}
+                    <a href="/"></a>
+                    {% else %}
+                    <a href="{% url 'usuarios.views.new_users' %}">Registrate</a>
+                    {% endif %}
+                </li>
+                <li><a href="/nuevoproducto">Ver productos</a>
+                </li>
+                 
+                <li>
+                    {% if user.is_authenticated %}
+                    <a href="/perfil/new_perfil/">Completar Perfil</a>
+                    {% else %}
+                    <a href="/" class="btn "></a>
+                     {% endif %}   
+                       
+                </li>
+
+                <li>{% if user.is_authenticated %}
+                    <a href="/">carrito de compra</a>
+                    {% else %}
+                    <a href="/"class="btn "></a>
+                     {% endif %}</li>
+                <li>{% if user.is_authenticated %}
+                    <a href="/">caja</a>
+                    {% else %}
+                    <a href="/" class="btn "></a>
+                     {% endif %}</li>
+                
+                
+            </ul>
+            <br style="clear: left" />
+        </div> <!-- end of ddsmoothmenu -->
+        <div id="templatemo_search">
+            <form action="#" method="get">
+              <input type="text" value=" " name="keyword" id="keyword" title="keyword" onfocus="clearText(this)" onblur="clearText(this)" class="txt_field" />
+              <input type="submit" name="Search" value=" " alt="Search" id="searchbutton" title="Search" class="sub_btn"  />
+            </form>
+        </div>
+    </div> <!-- END of templatemo_menubar -->
+    
+    <div id="templatemo_main">
+
+        <div id="sidebar" class="float_l">
+            <div class="sidebar_box"><span class="bottom"></span>
+                <h3>catalogo</h3>   
+                <div class="content"> 
+                    <ul class="sidebar_list">
+                       
+                        <li><a href="#">general </a></li>
+                        <li><a href="#">hombres</a></li>
+                        <li><a href="#">mujeres</a></li>
+                        <li><a href="#">niños</a></li>
+                    
+                    </ul>
+                </div>
+            </div>
+            <div class="sidebar_box"><span class="bottom"></span>
+                <h3>Ofertasy accesorios </h3>   
+                <div class="content"> 
+                    <div class="bs_box">
+                        <a href="#"><img src="{{STATIC_URL}}images/aimages/b10.jpg"alt="image" /></a>
+                        <h4><a href="#">zapatos + poncho</a></h4>
+                        <p class="price">299.90 bs</p>
+                        <div class="cleaner"></div>
+                    </div>
+                    <div class="bs_box">
+                        <a href="#"><img src="{{STATIC_URL}}images/aimages/b11.jpg" alt="image" /></a>
+                        <h4><a href="#">botines+ completo</a></h4>
+                        <p class="price">590.99 bs</p>
+                        <div class="cleaner"></div>
+                    </div>
+                    <div class="bs_box">
+                        <a href="#"><img src="{{STATIC_URL}}images/aimages/b12.jpg" alt="image" /></a>
+                        <h4><a href="#">zapatos para fiestas</a></h4>
+                        <p class="price">349.99 bs</p>
+                        <div class="cleaner"></div>
+                    </div>
+                    <div class="bs_box">
+                        <a href="#"><img src="{{STATIC_URL}}images/aimages/b9.jpg" alt="image" /></a>
+                        <h4><a href="#">zapatilas de calle</a></h4>
+                        <p class="price">39.90 bs</p>
+                        <div class="cleaner"></div>
+                    </div>
+                     <div class="bs_box">
+                        <a href="#"><img src="{{STATIC_URL}}images/aimages/b8.jpg" alt="image" /></a>
+                        <h4><a href="#">botas negras</a></h4>
+                        <p class="price">149.90 bs</p>
+                        <div class="cleaner"></div>
+                    </div>
+                     <div class="bs_box">
+                        <a href="#"><img src="{{STATIC_URL}}images/aimages/b14.jpg" alt="image" /></a>
+                        <h4><a href="#">zapatilas de calle</a></h4>
+                        <p class="price">50bs</p>
+                        <div class="cleaner"></div>
+                    </div>
+                 </div>
+            </div>
+             
+        </div>
+            <div id="contenido">
+      <div id="cuerpo">
+        {% block cuerpo%}
+        {%endblock%} 
+
+            
+    <div id="content" class="float_r">
+            <div id="slider-wrapper">
+                
+              
+               
+                <div id="htmlcaption" class="nivo-html-caption">
+                    <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>.
+                </div>
+            </div>
+            <script type="text/javascript" src="{{STATIC_URL}}js/jquery-1.4.3.min.js"></script>
+            <script type="text/javascript" src="{{STATIC_URL}}js/jquery.nivo.slider.pack.js"></script>
+         <!-- {% block index %}
+            {% endblock %}
+
+            {% block notificacion %}
+            {% endblock %}
+
+            {% block registro_usuario%}
+            {% endblock %}
+
+          
+            {% block perfil %}
+            {% endblock%}-->
+          
+
+                   
+        </div> 
+        <div class="cleaner"></div>
+      
+    </div> <!-- END of templatemo_main -->
+    
+
+    
+</div> <!-- END of templatemo_wrapper -->
+</div> <!-- END of templatemo_body_wrapper -->
+
+</body>
+</html>
+

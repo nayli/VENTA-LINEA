@@ -1,0 +1,76 @@
+{% extends "index.html" %}
+{% block titulo %}
+inicio
+{% endblock %}
+{% block cuerpo%}
+       
+        <div id="content" class="float_r">
+            <div id="slider-wrapper">
+                <div id="slider" class="nivoSlider">
+                    <img src="{{STATIC_URL}}images/slider/02.jpg" alt="" />
+                    <a href="#"><img src="{{STATIC_URL}}images/slider/01.jpg" alt="" title="" /></a>
+                    <img src="{{STATIC_URL}}images/slider/03.jpg" alt="" />
+                    <img src="{{STATIC_URL}}images/slider/04.jpg" alt="" title="" />
+                </div>
+                <div id="htmlcaption" class="nivo-html-caption">
+                    <strong></strong><em></em> <a href="#"></a>.
+                </div>
+            </div>
+            <script type="text/javascript" src="{{STATIC_URL}}js/jquery-1.4.3.min.js"></script>
+            <script type="text/javascript" src="{{STATIC_URL}}js/jquery.nivo.slider.pack.js"></script>
+            <script type="text/javascript">
+            $(window).load(function() {
+                $('#slider').nivoSlider();
+            });
+            </script>
+            {%block nuevospro%}
+            <h1>Zapatos de novedad</h1>
+            
+              <div class="product_box">
+                <h3>cazualmen</h3>
+                <a href="productdetail.html"><img src="{{STATIC_URL}}images/slider/a1.jpg" alt="" /></a>
+                <p> zapatos casuales para hombres ofresemos en colores azul y negro en tallas 30,40.</p>
+                <p class="product_price">Bs 200</p>
+                
+            </div>   
+                
+              <div class="product_box">
+                <h3>Cazualwom</h3>
+                <a href="productdetail.html"><img src="{{STATIC_URL}}images/slider/a2.jpg" alt="Shoes 2" /></a>
+                <p>zapatillas para damas en distintos tonos y en distintas tallas.<a href="http://validator.w3.org/check?uri=referer" rel="nofollow"></a> <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="nofollow"></a>.</p>
+              <p class="product_price">Bs 180</p>
+             </div>   
+           <div class="cleaner"></div>
+
+            <div class="product_box no_margin_right">
+                <h3>deporte</h3>
+                <a href="productdetail.html"><img src="{{STATIC_URL}}images/slider/a3.jpg" alt="Shoes 3" /></a>
+                <p>zapatillas de deporte en diferentes areas colores y tallas</p>
+              <p class="product_price">Bs 160</p>
+               
+            </div> 
+                                        
+            <div class="product_box">
+                <h3>Formales</h3>
+                 <a href="productdetail.html"><img src="{{STATIC_URL}}images/slider/a5.jpg" alt="Shoes 4" />   </a>
+            <p>zapatos de vestir y traje en deferentes tallas y modelos colores cafe y negro</p>
+             <p class="product_price">Bs 220</p>
+                
+            </div>          
+             
+        </div> 
+            {%endblock%}        
+       
+        <div class="cleaner"></div>
+      
+    </div> <!-- END of templatemo_main -->
+
+    
+   
+    
+</div> <!-- END of templatemo_wrapper -->
+</div> <!-- END of templatemo_body_wrapper -->
+
+</body>
+</html>
+{% endblock%}

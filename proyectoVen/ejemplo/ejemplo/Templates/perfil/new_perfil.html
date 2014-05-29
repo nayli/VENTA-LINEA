@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+{% block titulo %}
+	Crear Perfil
+{% endblock titulo %}
+
+{% block cuerpo %}
+	<form action="" enctype="multipart/form-data" method="post">{% csrf_token %}
+		{{ formulario.as_p }}
+		<button type="submit">Guardar</button>
+	</form>
+{% endblock cuerpo %}
